@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QoD-1l-UjB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--价格日历-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="价格日历" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-Ih-ad1">
+                                <rect key="frame" x="255" y="114" width="90" height="30"/>
+                                <state key="normal" title="Xib(顶部停靠)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6c8-Dh-kd2" kind="show" id="h89-QI-raK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwy-cq-gnp">
+                                <rect key="frame" x="248" y="164" width="105" height="30"/>
+                                <state key="normal" title="Xib(顶部不停靠)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oOd-fo-wLs" kind="show" id="AQL-nT-llc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2J-7e-GV9">
+                                <rect key="frame" x="262" y="214" width="75" height="30"/>
+                                <state key="normal" title="自定义属性">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="noX-jE-GYn" kind="show" id="o8H-ry-oXc"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sVR-D2-tTi">
+                                <rect key="frame" x="46" y="264" width="508" height="286"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">更多自定义内容，请查看
+SkyCalendarPriceConfig.h
+
+如需反馈问题
+请联系QQ：875766917(请备注)
+Mail：875766917@qq.com</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="W2J-7e-GV9" secondAttribute="centerX" id="4D7-kG-ZqP"/>
+                            <constraint firstItem="sVR-D2-tTi" firstAttribute="top" secondItem="W2J-7e-GV9" secondAttribute="bottom" constant="20" id="Dpu-eI-PgO"/>
+                            <constraint firstItem="G0D-Ih-ad1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="Hjr-G7-buz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sVR-D2-tTi" secondAttribute="trailing" constant="30" id="Lax-NG-scF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sVR-D2-tTi" secondAttribute="bottom" constant="50" id="a1q-ek-2wl"/>
+                            <constraint firstAttribute="centerX" secondItem="G0D-Ih-ad1" secondAttribute="centerX" id="a9E-GL-RQw"/>
+                            <constraint firstItem="sVR-D2-tTi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="h5K-l4-zXV"/>
+                            <constraint firstItem="W2J-7e-GV9" firstAttribute="top" secondItem="wwy-cq-gnp" secondAttribute="bottom" constant="20" id="iAT-FL-X6B"/>
+                            <constraint firstAttribute="centerX" secondItem="sVR-D2-tTi" secondAttribute="centerX" id="lMm-0I-blr"/>
+                            <constraint firstItem="wwy-cq-gnp" firstAttribute="top" secondItem="G0D-Ih-ad1" secondAttribute="bottom" constant="20" id="vG4-rp-9kI"/>
+                            <constraint firstAttribute="centerX" secondItem="wwy-cq-gnp" secondAttribute="centerX" id="zKf-Hb-gjm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="价格日历" id="MtJ-WV-yo0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="183"/>
+        </scene>
+        <!--Xib(顶部停靠)-->
+        <scene sceneID="ye3-7X-xCS">
+            <objects>
+                <viewController title="Xib(顶部停靠)" automaticallyAdjustsScrollViewInsets="NO" id="6c8-Dh-kd2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Noo-AA-aFd"/>
+                        <viewControllerLayoutGuide type="bottom" id="YWn-3i-lvn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gNX-R2-yDz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-dS-5dL" customClass="SkyCalendarPriceView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <collectionViewLayout key="collectionViewLayout" id="SJX-1r-mtx" customClass="SkyCalendarPriceLayout"/>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ft6-dS-5dL" firstAttribute="leading" secondItem="gNX-R2-yDz" secondAttribute="leading" id="GoU-OO-CJL"/>
+                            <constraint firstAttribute="bottom" secondItem="ft6-dS-5dL" secondAttribute="bottom" id="MzQ-sa-t3D"/>
+                            <constraint firstItem="ft6-dS-5dL" firstAttribute="top" secondItem="Noo-AA-aFd" secondAttribute="bottom" id="Q7U-vP-QIa"/>
+                            <constraint firstAttribute="trailing" secondItem="ft6-dS-5dL" secondAttribute="trailing" id="fUs-jd-GRP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="v" destination="ft6-dS-5dL" id="5ZY-eM-jwd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Vp-Qr-kyh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="-492"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tXV-iL-qbH">
+            <objects>
+                <navigationController id="QoD-1l-UjB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W7O-K8-VUa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="9q3-v6-BKy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06C-GY-iib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="183"/>
+        </scene>
+        <!--自定义-->
+        <scene sceneID="Vav-bT-XHY">
+            <objects>
+                <viewController title="自定义" automaticallyAdjustsScrollViewInsets="NO" id="noX-jE-GYn" customClass="ViewControllerTest2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n1I-JP-NUh"/>
+                        <viewControllerLayoutGuide type="bottom" id="KgK-Ii-6UA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P5N-sR-Wvb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9w-GO-CQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="944"/>
+        </scene>
+        <!--Xib(顶部不停靠)-->
+        <scene sceneID="ZXR-bE-6Mq">
+            <objects>
+                <viewController title="Xib(顶部不停靠)" automaticallyAdjustsScrollViewInsets="NO" id="oOd-fo-wLs" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xim-2D-jXU"/>
+                        <viewControllerLayoutGuide type="bottom" id="o2E-k4-aew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sKi-vn-FTK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sar-ja-BBK" customClass="SkyCalendarPriceView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="6Pl-yO-yY8">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sar-ja-BBK" secondAttribute="trailing" id="P30-k8-qDt"/>
+                            <constraint firstItem="sar-ja-BBK" firstAttribute="top" secondItem="xim-2D-jXU" secondAttribute="bottom" id="S1z-9E-hW2"/>
+                            <constraint firstAttribute="bottom" secondItem="sar-ja-BBK" secondAttribute="bottom" id="neh-vy-30n"/>
+                            <constraint firstItem="sar-ja-BBK" firstAttribute="leading" secondItem="sKi-vn-FTK" secondAttribute="leading" id="qfZ-7X-Dlj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="v" destination="sar-ja-BBK" id="4IP-z6-HXN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaZ-QF-qtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="183"/>
+        </scene>
+    </scenes>
+</document>
