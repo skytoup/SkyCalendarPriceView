@@ -74,7 +74,7 @@ static void(^InitCellStyleBlock)(UIView*);
 }
 
 - (void)setContentWithDay:(NSString*)day withPrice:(NSString*)price withCount:(NSString*)count {
-    self.backgroundColor = self.isSelected?SkyCalendarCell_DATA_CELL_SELECT_BACKGROUND_COLOR:SkyCalendarCell_DATA_CELL_UNSELECT_BACKGROUND_COLOR;
+    self.contentView.backgroundColor = self.isSelected?SkyCalendarCell_DATA_CELL_SELECT_BACKGROUND_COLOR:SkyCalendarCell_DATA_CELL_UNSELECT_BACKGROUND_COLOR;
     _lb1.text = day;
     _lb2.text = price;
     _lb3.text = count;
@@ -84,7 +84,7 @@ static void(^InitCellStyleBlock)(UIView*);
 }
 
 - (void)setContentWithDay:(NSString*)day {
-    self.backgroundColor = SkyCalendarCell_DATE_CELL_BACKGROUND_COLOR;
+    self.contentView.backgroundColor = SkyCalendarCell_DATE_CELL_BACKGROUND_COLOR;
     _lb1.text = @"";
     _lb2.text = day;
     _lb3.text = @"";
@@ -94,7 +94,7 @@ static void(^InitCellStyleBlock)(UIView*);
 }
 
 - (void)setContentEmpty {
-    self.backgroundColor = SkyCalendarCell_EMPTY_CELL_BACKGROUND_COLOR;
+    self.contentView.backgroundColor = SkyCalendarCell_EMPTY_CELL_BACKGROUND_COLOR;
     _lb1.text = @"";
     _lb2.text = @"";
     _lb3.text = @"";

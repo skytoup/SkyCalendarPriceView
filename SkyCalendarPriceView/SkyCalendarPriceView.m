@@ -93,7 +93,7 @@
 }
 
 - (NSDate*)formDateWithYear:(int)year withMonth:(int)month withDay:(int)day {
-    return [_df dateFromString:[NSString stringWithFormat:@"%4d-%2d-%2d", year, month, day] ];
+    return [_df dateFromString:[NSString stringWithFormat:@"%d-%02d-%02d", year, month, day] ];
 }
 
 - (void)updateCalendarDatas {
@@ -104,10 +104,7 @@
 - (BOOL)isTodayWithYear:(int)year withMonth:(int)month withDay:(int)day {
     BOOL is = NO;
     if(_todayStr) {
-        NSDate *date = [self formDateWithYear:year withMonth:month withDay:day];
-        if([_todayStr isEqualToString:[_df stringFromDate:date] ]) {
-            is = YES;
-        }
+        is = [_todayStr isEqualToString:[NSString stringWithFormat:@"%d-%02d-%02d", year, month, day] ];
     }
     return is;
 }
